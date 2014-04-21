@@ -1,0 +1,22 @@
+<{$bootstrap}>
+<{$jquery}>
+<{$toolbar}>
+<div class="row-fluid">
+<{foreach  key=k item=program   from=$data }>
+<a    href="<{$program.itemurl}>">
+<span class="span3">
+<p>&nbsp;</p>
+ <div class="text-center">
+  <{if ($program.logo) }>
+    <img alt="<{$program.itemname}>" src="<{$program.itemurl}>/<{$program.logo}>">
+  <{else  }>
+    <img alt="<{$program.itemname}>" src="">	
+  <{/if}>  
+  </div>
+  <div class="text-center"><{$program.itemname}></div>
+ 
+</span>
+</a>
+<{/foreach}>
+
+</div>
