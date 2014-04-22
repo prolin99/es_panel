@@ -27,6 +27,8 @@ function get_tad_themes_menu($keyword){
   $result = $xoopsDB->query($sql) or redirect_header($_SERVER['PHP_SELF'],3, mysql_error());
   $row=$xoopsDB->fetchArray($result);
   $mid= $row['menuid'] ;
+  
+   if (!$mid ) return ;
    
   //取得該類別全部的程式
   $sql = "select * from ".$xoopsDB->prefix("tad_themes_menu")." where   of_level='$mid' order by position   ";
