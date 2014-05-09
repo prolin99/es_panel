@@ -8,7 +8,7 @@
 //---基本設定---//
 
 $modversion['name'] ='校務行政面板';				//模組名稱
-$modversion['version']	= '0.2';				//模組版次
+$modversion['version']	= '0.3';				//模組版次
 $modversion['author'] = 'prolin(prolin@tn.edu.tw)';		//模組作者
 $modversion['description'] ='以圖示顯示校務行政軟體';			//模組說明
 $modversion['credits']	= 'prolin';				//模組授權者
