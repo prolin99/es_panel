@@ -30,8 +30,8 @@ function get_tad_themes_menu($keyword){
   
    if (!$mid ) return ;
    
-  //取得該類別全部的程式
-  $sql = "select * from ".$xoopsDB->prefix("tad_themes_menu")." where   of_level='$mid' order by position   ";
+  //取得該類別全部的程式  status =1 顯示
+  $sql = "select * from ".$xoopsDB->prefix("tad_themes_menu")." where   of_level='$mid'  and status =1 order by position   ";
   $result = $xoopsDB->query($sql) or redirect_header($_SERVER['PHP_SELF'],3, mysql_error());
 
   while($row=$xoopsDB->fetchArray($result)){
