@@ -8,7 +8,7 @@
 //---基本設定---//
 
 $modversion['name'] ='校務行政面板';				//模組名稱
-$modversion['version']	= '0.4';				//模組版次
+$modversion['version']	= '0.5';				//模組版次
 $modversion['author'] = 'prolin(prolin@tn.edu.tw)';		//模組作者
 $modversion['description'] ='以圖示顯示校務行政軟體';			//模組說明
 $modversion['credits']	= 'prolin';				//模組授權者
@@ -73,5 +73,19 @@ $modversion['config'][$i]['formtype']    = 'textbox';
 $modversion['config'][$i]['valuetype']   = 'text';
 $modversion['config'][$i]['default'] ="校務行政" ;
  
+$i++ ;
+$modversion['config'][$i]['name'] = 'es_panel_memo';
+$modversion['config'][$i]['title']   = '_MI_ESPANEL_CON_TITLE2';
+$modversion['config'][$i]['description'] = '_MI_ESPANEL_CON_DESC2';
+$modversion['config'][$i]['formtype']    = 'textbox';
+$modversion['config'][$i]['valuetype']   = 'text';
+$modversion['config'][$i]['default'] ="勿用舊版 IE ，建議使用 <a href='http://moztw.org/firefox/' target='_blank'>firefox</a>、<a href='http://www.google.com.tw/intl/zh-TW/chrome/browser/' target='_blank'>chrome</a>" ;
 
+$i++ ;
+$modversion['config'][$i]['name'] = 'es_panel_width';
+$modversion['config'][$i]['title']   = '_MI_ESPANEL_CON_TITLE3';
+$modversion['config'][$i]['description'] = '_MI_ESPANEL_CON_DESC3';
+$modversion['config'][$i]['formtype']    = 'textbox';
+$modversion['config'][$i]['valuetype']   = 'text';
+$modversion['config'][$i]['default'] ="3" ;
 ?>

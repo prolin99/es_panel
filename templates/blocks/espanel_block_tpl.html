@@ -1,9 +1,9 @@
 
 <div class="row-fluid">
 
-<{foreach  key=k item=program   from=$block }>
+<{foreach  key=k item=program   from=$block.item }>
 <a    href="<{$program.itemurl}>">
-<span class="span3">
+<span class="span<{$block.width}>">
 <p>&nbsp;</p>
  <div class="text-center">
   <{if ($program.logo) }>
@@ -18,3 +18,6 @@
 <{/foreach}>
 
 </div>
+<{if ($block.memo) }>
+<div class="alert alert-block"><{$block.memo}></div>
+<{/if}>

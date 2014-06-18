@@ -39,7 +39,9 @@ function get_tad_themes_menu($keyword){
 	$row['logo']= get_xoopsLogo($row['itemurl']) ;
 	$data[]=$row ;
   }
-
+	
+  
+  
   return $data ;
 }
 

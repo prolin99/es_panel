@@ -3,9 +3,9 @@
 <link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/modules/tadtools/css/xoops_adm.css" />
 本模組配合  佈景管理 -- 選單設定，預設為[校務行政]選單。也提供區塊做顯示畫面。
 <div class="row-fluid">
-<{foreach  key=k item=program   from=$data }>
+<{foreach  key=k item=program   from=$data.item }>
 <a    href="<{$program.itemurl}>">
-<span class="span3">
+<span class="span<{$data.width}>">
 <p>&nbsp;</p>
  <div class="text-center">
   <{if ($program.logo) }>
@@ -22,3 +22,6 @@
 <{/foreach}>
 
 </div>
+<{if ($data.memo) }>
+<div class="alert alert-block"><{$data.memo}></div>
+<{/if}>

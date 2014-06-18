@@ -2,15 +2,16 @@
 <{$jquery}>
 <{$toolbar}>
 <div class="row-fluid">
-<{foreach  key=k item=program   from=$data }>
+<{foreach  key=k item=program   from=$data.item }>
 <a    href="<{$program.itemurl}>">
-<span class="span3">
+<span class="span<{$data.width}>">
 <p>&nbsp;</p>
  <div class="text-center">
   <{if ($program.logo) }>
     <img alt="<{$program.itemname}>" src="<{$program.itemurl}>/<{$program.logo}>">
   <{else  }>
-    <img alt="<{$program.itemname}>" src="">	
+    <button class="btn btn-large btn-primary" type="button"><{$program.itemname}></button>
+    
   <{/if}>  
   </div>
   <div class="text-center"><{$program.itemname}></div>
@@ -20,3 +21,6 @@
 <{/foreach}>
 
 </div>
+<{if ($data.memo) }>
+<div class="alert alert-block"><{$data.memo}></div>
+<{/if}>

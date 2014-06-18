@@ -13,5 +13,10 @@ define("_MI_ESPANEL_DESC","以圖示顯示校務行政軟體");
 define("_MI_ESPANEL_CON_TITLE1","選單類別");
 define("_MI_ESPANEL_CON_DESC1","配合 佈景管理-選單設定，中的類別名稱");
 
+define("_MI_ESPANEL_CON_TITLE2","提醒文字");
+define("_MI_ESPANEL_CON_DESC2","在下方出現的提醒文字。");
+
+define("_MI_ESPANEL_CON_TITLE3","每格寬度");
+define("_MI_ESPANEL_CON_DESC3","配合 bootstrap 12格設計，要佔幾格");
 
 ?>

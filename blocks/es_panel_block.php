@@ -16,8 +16,11 @@ function panel_show() {
 	$xoopsModuleConfig=panel_get_xoopsModuleConfig("es_panel") ;
 	
 	$keyword = $xoopsModuleConfig['es_panel_keyword'] ;			
+	//取得顯示提醒
+	$block['memo'] = $xoopsModuleConfig['es_panel_memo'] ;			
+	$block['width'] = $xoopsModuleConfig['es_panel_width'] ;			
 	//echo $keyword ;
- 	$block = get_tad_themes_menu($keyword) ;
+ 	$block['item'] = get_tad_themes_menu($keyword) ;
 	//var_dump($block) ;
  	return $block ;
  

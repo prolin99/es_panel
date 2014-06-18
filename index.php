@@ -17,8 +17,9 @@ include_once XOOPS_ROOT_PATH."/header.php";
 /*-----------執行動作判斷區----------*/
 //$op=empty($_REQUEST['op'])?"":$_REQUEST['op'];
 	$keyword = $xoopsModuleConfig['es_panel_keyword'] ;			
-
- 	$data = get_tad_themes_menu($keyword) ;
+	$data['memo'] = $xoopsModuleConfig['es_panel_memo'] ;			
+	$data['width'] = $xoopsModuleConfig['es_panel_width'] ;	
+ 	$data['item'] = get_tad_themes_menu($keyword) ;
 
 
 /*-----------秀出結果區--------------*/
