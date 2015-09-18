@@ -1,23 +1,25 @@
 
-<div class="<{$block.row}>">
-
-<{foreach  key=k item=program   from=$block.item }>
+<{$toolbar}>
+<div class="row">
+<{foreach  key=k item=program   from=$data.item }>
 <a    href="<{$program.itemurl}>">
-<div class="<{$block.span}><{$block.width}>">
+<div class="col-md-<{$data.width}>">
 <p>&nbsp;</p>
  <div class="text-center">
   <{if ($program.logo) }>
     <img alt="<{$program.itemname}>" src="<{$program.itemurl}>/<{$program.logo}>">
   <{else  }>
     <button class="btn btn-large btn-primary" type="button"><{$program.itemname}></button>
+
   <{/if}>
   </div>
   <div class="text-center"><{$program.itemname}></div>
- </div>
+
+</div>
 </a>
 <{/foreach}>
 
 </div>
-<{if ($block.memo) }>
-<div class="alert alert-block"><{$block.memo}></div>
+<{if ($data.memo) }>
+<div class="alert alert-block"><{$data.memo}></div>
 <{/if}>

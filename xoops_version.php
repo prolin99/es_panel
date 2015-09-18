@@ -38,7 +38,7 @@ $modversion['system_menu'] = 1;//---資料表架構---//
 $modversion['hasAdmin'] = 1;
 $modversion['adminindex'] = "admin/index.php";
 $modversion['adminmenu'] = "admin/menu.php";
- 
+
 //---使用者主選單設定---//
 $modversion['hasMain'] = 0;
 
@@ -47,13 +47,21 @@ $modversion['hasMain'] = 0;
 $modversion['templates'] = array();
 $i=1;
 $modversion['templates'][$i]['file'] = 'espanel_index_tpl.html';
-$modversion['templates'][$i]['description'] = 'espanel_index_tpl.html'; 
+$modversion['templates'][$i]['description'] = 'espanel_index_tpl.html';
 $i++ ;
 $modversion['templates'][$i]['file'] = 'esp_ad_index_tpl.html';
-$modversion['templates'][$i]['description'] = 'esp_ad_index_tpl.html'; 
+$modversion['templates'][$i]['description'] = 'esp_ad_index_tpl.html';
+
+$i++ ;
+$modversion['templates'][$i]['file'] = 'espanel_index_tpl_b3.html';
+$modversion['templates'][$i]['description'] = 'espanel_index_tpl.html';
+$i++ ;
+$modversion['templates'][$i]['file'] = 'esp_ad_index_tpl_b3.html';
+$modversion['templates'][$i]['description'] = 'esp_ad_index_tpl.html';
 
 //---區塊設定---//
 $modversion['blocks'] = array();
+$i=1 ;
 $modversion['blocks'][1]['file'] = "es_panel_block.php";
 $modversion['blocks'][1]['name'] = '行政面板';
 $modversion['blocks'][1]['description'] = '顯示行政程式圖示';
@@ -72,7 +80,7 @@ $modversion['config'][$i]['description'] = '_MI_ESPANEL_CON_DESC1';
 $modversion['config'][$i]['formtype']    = 'textbox';
 $modversion['config'][$i]['valuetype']   = 'text';
 $modversion['config'][$i]['default'] ="校務行政" ;
- 
+
 $i++ ;
 $modversion['config'][$i]['name'] = 'es_panel_memo';
 $modversion['config'][$i]['title']   = '_MI_ESPANEL_CON_TITLE2';
