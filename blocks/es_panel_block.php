@@ -22,11 +22,11 @@ function panel_show() {
 	//echo $keyword ;
  	$block['item'] = get_tad_themes_menu($keyword) ;
     $block['row']               = $_SESSION['bootstrap'] == '3' ? 'row' : 'row-fluid';
-    $block['span']              = $_SESSION['bootstrap'] == '3' ? 'col-md-' : 'span';
-
+    $block['span']             = $_SESSION['bootstrap'] == '3' ? 'col-md-' : 'span';
+    $block['spanxs']         = $_SESSION['bootstrap'] == '3' ? 'col-xs-' : 'span';
 
 	//var_dump($block) ;
- 	return $block ;
+	return $block ;
 
 }
 
