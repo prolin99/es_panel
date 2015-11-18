@@ -96,4 +96,12 @@ $modversion['config'][$i]['description'] = '_MI_ESPANEL_CON_DESC3';
 $modversion['config'][$i]['formtype']    = 'textbox';
 $modversion['config'][$i]['valuetype']   = 'text';
 $modversion['config'][$i]['default'] ="3" ;
+
+$i++ ;
+$modversion['config'][$i]['name'] = 'es_panel_xs_width';
+$modversion['config'][$i]['title']   = '_MI_ESPANEL_CON_TITLE4';
+$modversion['config'][$i]['description'] = '_MI_ESPANEL_CON_DESC4';
+$modversion['config'][$i]['formtype']    = 'textbox';
+$modversion['config'][$i]['valuetype']   = 'text';
+$modversion['config'][$i]['default'] ="4" ;
 ?>

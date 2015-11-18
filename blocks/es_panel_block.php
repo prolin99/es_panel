@@ -19,11 +19,12 @@ function panel_show() {
 	//取得顯示提醒
 	$block['memo'] = $xoopsModuleConfig['es_panel_memo'] ;
 	$block['width'] = $xoopsModuleConfig['es_panel_width'] ;
+	$block['xswidth'] = $xoopsModuleConfig['es_panel_xs_width'] ;
 	//echo $keyword ;
  	$block['item'] = get_tad_themes_menu($keyword) ;
     $block['row']               = $_SESSION['bootstrap'] == '3' ? 'row' : 'row-fluid';
-    $block['span']             = $_SESSION['bootstrap'] == '3' ? 'col-md-' : 'span';
-    $block['spanxs']         = $_SESSION['bootstrap'] == '3' ? 'col-xs-' : 'span';
+    $block['span']             = $_SESSION['bootstrap'] == '3' ? 'col-md-'.$block['width']  : 'span'.$block['width'] ;
+    $block['spanxs']         = $_SESSION['bootstrap'] == '3' ? 'col-xs-'. $block['xswidth']  : '';
 
 	//var_dump($block) ;
 	return $block ;
