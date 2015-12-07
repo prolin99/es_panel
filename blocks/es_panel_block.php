@@ -22,9 +22,14 @@ function panel_show() {
 	$block['xswidth'] = $xoopsModuleConfig['es_panel_xs_width'] ;
 	//echo $keyword ;
  	$block['item'] = get_tad_themes_menu($keyword) ;
+ 	/*
     $block['row']               = $_SESSION['bootstrap'] == '3' ? 'row row-fluid' : 'row-fluid';
     $block['span']             = $_SESSION['bootstrap'] == '3' ? 'span'.$block['width']  .'  col-md-'.$block['width']  : 'span'.$block['width'] ;
     $block['spanxs']         = $_SESSION['bootstrap'] == '3' ? 'col-xs-'. $block['xswidth']  : '';
+    */
+    $block['row']               =   'row row-fluid'  ;
+    $block['span']             =   'span'.$block['width']  .'  col-md-'.$block['width']  ;
+    $block['spanxs']         =   'col-xs-'. $block['xswidth']  ;    
 
 	//var_dump($block) ;
 	return $block ;
