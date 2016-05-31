@@ -24,7 +24,7 @@ function get_tad_themes_menu($keyword){
   
   //取得校務行政的代號
   $sql = "select * from ".$xoopsDB->prefix("tad_themes_menu")." where itemname='$keyword' and of_level=0 ";
-  $result = $xoopsDB->query($sql) or redirect_header($_SERVER['PHP_SELF'],3, mysql_error());
+  $result = $xoopsDB->query($sql) or redirect_header($_SERVER['PHP_SELF'],3, $xoopsDB->error());
   $row=$xoopsDB->fetchArray($result);
   $mid= $row['menuid'] ;
   
@@ -32,7 +32,7 @@ function get_tad_themes_menu($keyword){
    
   //取得該類別全部的程式  status =1 顯示
   $sql = "select * from ".$xoopsDB->prefix("tad_themes_menu")." where   of_level='$mid'  and status =1 order by position   ";
-  $result = $xoopsDB->query($sql) or redirect_header($_SERVER['PHP_SELF'],3, mysql_error());
+  $result = $xoopsDB->query($sql) or redirect_header($_SERVER['PHP_SELF'],3, $xoopsDB->error());
 
   while($row=$xoopsDB->fetchArray($result)){
 	//取出模組 DIRname
