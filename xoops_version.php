@@ -8,7 +8,7 @@
 //---基本設定---//
 
 $modversion['name'] ='校務行政面板';				//模組名稱
-$modversion['version']	= '0.7';				//模組版次
+$modversion['version']	= '0.8';				//模組版次
 $modversion['author'] = 'prolin(prolin@tn.edu.tw)';		//模組作者
 $modversion['description'] ='以圖示顯示校務行政軟體';			//模組說明
 $modversion['credits']	= 'prolin';				//模組授權者
@@ -46,18 +46,13 @@ $modversion['hasMain'] = 0;
 //---樣板設定---要有指定，才會編譯動作，//
 $modversion['templates'] = array();
 $i=1;
-$modversion['templates'][$i]['file'] = 'espanel_index_tpl.html';
-$modversion['templates'][$i]['description'] = 'espanel_index_tpl.html';
-$i++ ;
-$modversion['templates'][$i]['file'] = 'esp_ad_index_tpl.html';
-$modversion['templates'][$i]['description'] = 'esp_ad_index_tpl.html';
 
+
+$modversion['templates'][$i]['file'] = 'espanel_index.tpl';
+$modversion['templates'][$i]['description'] = 'espanel_index.tpl';
 $i++ ;
-$modversion['templates'][$i]['file'] = 'espanel_index_tpl_b3.html';
-$modversion['templates'][$i]['description'] = 'espanel_index_tpl.html';
-$i++ ;
-$modversion['templates'][$i]['file'] = 'esp_ad_index_tpl_b3.html';
-$modversion['templates'][$i]['description'] = 'esp_ad_index_tpl.html';
+$modversion['templates'][$i]['file'] = 'esp_ad_index.tpl';
+$modversion['templates'][$i]['description'] = 'esp_ad_index.tpl';
 
 //---區塊設定---//
 $modversion['blocks'] = array();

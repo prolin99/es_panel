@@ -1,6 +1,15 @@
 
-本模組配合  佈景管理 -- 選單設定，預設為[校務行政]選單。也提供區塊做顯示畫面。
 <div class="row">
+  <div class="form-group">
+    <form action ="index.php" enctype='multipart/form-data' method=post>
+   <label for="menu_root" class='col-md-2'>選用配合選單</label>
+    <div class='col-md-4'>
+    <{html_options name='menu_root' options=$data.menu_root  selected=$keyword  class='form-control'  }>
+    </div>
+    <button type='submit'  name='do_key' value='menu_select' class='btn btn-primary'>指定</button>
+  </form>
+  </div>
+
 <{foreach  key=k item=program   from=$data.item }>
 <a    href="<{$program.itemurl}>">
 <div class="col-md-<{$data.width}> col-xs-<{$data.width}>">

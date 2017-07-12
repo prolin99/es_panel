@@ -6,7 +6,7 @@
 // ------------------------------------------------------------------------- //
 /*-----------引入檔案區--------------*/
 include_once "header.php";
-$xoopsOption['template_main'] = set_bootstrap("espanel_index_tpl.html");
+$xoopsOption['template_main'] = set_bootstrap("espanel_index.tpl");
 include_once XOOPS_ROOT_PATH."/header.php";
 
 

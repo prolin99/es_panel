@@ -16,41 +16,54 @@ include_once XOOPS_ROOT_PATH."/modules/tadtools/tad_function.php";
 
 
 /********************* 預設函數 *********************/
+function get_tad_themes_menu_root() {
+    global $xoopsDB;
+  //取得根目錄選單
+  $sql = "select * from ".$xoopsDB->prefix("tad_themes_menu")." where  of_level=0 ";
+
+  $result = $xoopsDB->query($sql) or redirect_header($_SERVER['PHP_SELF'],3, $xoopsDB->error());
+
+  while($row=$xoopsDB->fetchArray($result)){
+     $data[$row['itemname']]=$row['itemname'];
+  }
+  return $data ;
+}
+
 
 //以 tad_themes_menu資料
 function get_tad_themes_menu($keyword){
   global $xoopsDB;
   if(empty($keyword))return;
-  
+
   //取得校務行政的代號
   $sql = "select * from ".$xoopsDB->prefix("tad_themes_menu")." where itemname='$keyword' and of_level=0 ";
   $result = $xoopsDB->query($sql) or redirect_header($_SERVER['PHP_SELF'],3, $xoopsDB->error());
   $row=$xoopsDB->fetchArray($result);
   $mid= $row['menuid'] ;
-  
+
    if (!$mid ) return ;
-   
+
   //取得該類別全部的程式  status =1 顯示
   $sql = "select * from ".$xoopsDB->prefix("tad_themes_menu")." where   of_level='$mid'  and status =1 order by position   ";
   $result = $xoopsDB->query($sql) or redirect_header($_SERVER['PHP_SELF'],3, $xoopsDB->error());
 
   while($row=$xoopsDB->fetchArray($result)){
-	//取出模組 DIRname
-	$row['logo']= get_xoopsLogo($row['itemurl']) ;
-	$data[]=$row ;
+	   //取出模組 DIRname
+	    $row['logo']= get_xoopsLogo($row['itemurl']) ;
+	     $data[]=$row ;
   }
-	
-  
-  
+
+
+
   return $data ;
 }
 
 //取得程式的圖示
 function get_xoopsLogo($module_url){
 	list($path , $mdir ) = preg_split('/modules\//' , $module_url)  ;
- 	
+
  	if (!$mdir)  return ;
- 	
+
  	//取得模組名稱
 	list($module_dir ,$m_last) = preg_split('/\//' , $mdir)  ;
 
@@ -59,6 +72,6 @@ function get_xoopsLogo($module_url){
   	$logoimage = $xoopsModule->getInfo("image") ;
  	$log_url=  $path. 'modules/'.$mdir .$logoimage ;
  	$log_url=  $logoimage ;
- 
+
  	 return $log_url ;
 }
