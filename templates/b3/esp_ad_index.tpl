@@ -11,20 +11,22 @@
   </div>
 
 <{foreach  key=k item=program   from=$data.item }>
-<a    href="<{$program.itemurl}>">
+
 <div class="col-md-<{$data.width}> col-xs-<{$data.width}>">
-<p>&nbsp;</p>
+
  <div class="text-center">
+  <a href="<{$program.itemurl}>">
   <{if ($program.logo) }>
-    <img alt="<{$program.itemname}>" src="<{$program.itemurl}>/<{$program.logo}>">
+    <img alt="<{$program.itemname}>" src="<{$program.itemurl}>/<{$program.logo}>" title="<{$program.itemname}>" alt="<{$program.itemname}>" >
   <{else  }>
-    <button class="btn btn-large btn-primary" type="button"><{$program.itemname}></button>
-<{/if}>
-  </div>
-  <div class="text-center"><{$program.itemname}></div>
+    <button class="btn btn-large btn-primary" type="button" title="<{$program.itemname}>" alt="<{$program.itemname}>"><{$program.itemname}></button>
+  <{/if}>
+  </a>
+ </div>
+ <br />
 
 </div>
-</a>
+
 <{/foreach}>
 
 </div>
