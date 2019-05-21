@@ -4,7 +4,7 @@
 // 製作日期：2014-05-1
 // $Id:$
 // ------------------------------------------------------------------------- //
-include_once XOOPS_ROOT_PATH."/modules/tadtools/language/{$xoopsConfig['language']}/modinfo_common.php";
+xoops_loadLanguage('modinfo_common', 'tadtools'); 
 
 define("_MI_ESPANEL_NAME","校務行政專區");
 define("_MI_ESPANEL_AUTHOR","prolin (prolin@tn.edu.tw)");
